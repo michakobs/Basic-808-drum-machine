@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="playSong">Song abspielen</button>
+    <button id="stopSong">Song stoppen</button>
+    <button id="pauseSong">Song pausieren</button>
+
+    <div id="drumframe">
+        <div class="drumpad" id="pad1">pad1</div>
+        <div class="drumpad" id="pad2">pad2</div>
+        <div class="drumpad" id="pad3">pad3</div>
+        <div class="drumpad" id="pad4">pad4</div>
+        <div class="drumpad" id="pad5">pad5</div>
+        <div class="drumpad" id="pad6">pad6</div>
+        <div class="drumpad" id="pad7">pad7</div>
+        <div class="drumpad" id="pad8">pad8</div>
+        <div class="drumpad" id="pad9">pad9</div>
+
+
+    </div>
+
+    <div id="selector">
+        <div id="padselect" class="dropdown">
+            <form action="#">
+                <label>Pad Select:<br>
+                    <select id="padSelector" name="drumsound" size="1">
+                        <option value="0">pad 1</option>
+                        <option value="1">pad 2</option>
+                        <option value="2">pad 3</option>
+                        <option value="3">pad 4</option>
+                        <option value="4">pad 5</option>
+                        <option value="5">pad 6</option>
+                        <option value="6">pad 7</option>
+                        <option value="7">pad 8</option>
+                        <option value="8">pad 9</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+
+
+
+
+        <div id="soundselect" class="dropdown">
+            <form action="#">
+                <label>Sound Select:<br>
+                    <select id="soundSelector" name="drumsound" size="1">
+
+                    </select>
+                </label>
+            </form>
+        </div>
+
+        <div id="overwriteSound" class="dropdown">
+            <button id="changeNOW" type="submit">Zuweisen</button>
+        </div>
+
+    </div>
+
+
+    <div class="sequencer" id="sequencer">
+        <div class="track" id="track1"></div>
+        <div class="track" id="track2"></div>
+        <div class="track" id="track3"></div>
+        <div class="track" id="track4"></div>
+        <div class="track" id="track5"></div>
+        <div class="track" id="track6"></div>
+        <div class="track" id="track7"></div>
+        <div class="track" id="track8"></div>
+        <div class="track" id="track9"></div>
+    </div>
+    <div class="slidercontainer">
+        <label for="speed">Speed [20 ... 180 bpm]: <br>
+            <input name="speed" type="range" min="20" max="180" value="120" class="slider" id="speed">
+        </label>
+        <div>
+            <span >SPEED: </span>
+            <span id="speedIndicator"></span>
+            <span >bpm</span>
+        </div>
+        
+
+        <form action="#" id="beat">
+            <label>Beat: 
+                <select id="beatSelector" name="beatcount" size="1">
+                    <option value="3">3/4</option>
+                    <option value="4">4/4</option>
+                    <option value="6">6/4</option>
+                </select>
+            </label>
+        </form>
+        <form action="#" id="note">
+            <label>Notes:
+                <select id="noteSelector" name="noteselect" size="1">
+                    <!-- <option value="1">1/1</option>
+                    <option value="2">1/2</option> -->
+                    <option value="4">1/4</option>
+                    <option value="8">1/8</option>
+                    <option value="16">1/16</option>
+                    <option value="32">1/32</option>
+                    <option value="64">1/64</option>
+                </select>
+            </label>
+        </form>
+        <div id="recplay">
+                
+                        <button id="seqSTOP" type="submit">STOP</button>
+                        <button id="seqPLAY" type="submit">PLAY</button>
+                        <button id="seqREC" type="submit">REC</button>
+                    
+        </div>
+    </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
